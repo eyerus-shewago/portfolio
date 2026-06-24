@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eyerus Shewago | Full-Stack Developer & UI/UX Designer</title>
+  <meta name="description" content="Portfolio of Eyerus Shewago - An Information Technology student and Full-Stack Developer passionate about software development and web technologies.">
+  <meta name="keywords" content="Eyerus Shewago, Web Developer, Portfolio, Full-Stack Developer, UI/UX Designer, IT Student">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Eyerus Shewago | Developer Portfolio">
+  <meta property="og:description" content="Portfolio of Eyerus Shewago - An Information Technology student and Full-Stack Developer.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Background Orbs for Ambient Glow -->
+  <div class="ambient-glow">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-accent">&lt;</span>EYERUS SHEWAGO<span class="logo-accent"> /&gt;</span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-item active">Home</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+      <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span> Available for Opportunities
+          </div>
+          <h1 class="hero-title">
+            Creative Developer<br>
+            <span class="gradient-text">Eyerus Shewago</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            I build <span id="typing-text" class="neon-glow-cyan"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-description">
+            Information Technology student passionate about software development, web technologies, and problem-solving. I enjoy learning new technologies and building projects that create real-world solutions.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Glassmorphic Card (Interactive IDE Mockup) -->
+        <div class="hero-visual">
+          <div class="ide-card" id="ide-card">
+            <div class="ide-header">
+              <div class="ide-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="ide-title">developer.js</div>
+              <div class="ide-actions">
+                <i data-lucide="terminal" size="14"></i>
+              </div>
+            </div>
+            <div class="ide-body">
+              <pre><code><span class="code-keyword">const</span> developer = {
+  name: <span class="code-string">'Eyerus Shewago'</span>,
+  title: <span class="code-string">'Full-Stack Developer & IT Student'</span>,
+  passions: [<span class="code-string">'Software Development'</span>, <span class="code-string">'Web Technologies'</span>, <span class="code-string">'Problem Solving'</span>],
+  skills: [<span class="code-string">'HTML/CSS'</span>, <span class="code-string">'JS'</span>, <span class="code-string">'React'</span>, <span class="code-string">'Node.js'</span>, <span class="code-string">'Java'</span>],
+  readyToCode: <span class="code-boolean">true</span>
+};
+
+<span class="code-comment">// Transforming ideas into reality</span>
+<span class="code-keyword">function</span> <span class="code-function">createSolutions</span>(ideas) {
+  <span class="code-keyword">return</span> ideas.map(idea => {
+    <span class="code-keyword">return</span> <span class="code-keyword">new</span> <span class="code-class">RealWorldSolution</span>(idea);
+  });
+}
+
+console.log(<span class="code-string">'Site initialized.'</span>);</code></pre>
+            </div>
+            <div class="ide-glow" id="ide-glow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <a href="#about" aria-label="Scroll Down">
+          <div class="mouse">
+            <span class="wheel"></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section scroll-reveal">
+      <div class="section-container">
+        <h2 class="section-title"><span class="number">01.</span> About Me</h2>
+        <div class="about-grid">
+          <div class="about-text-card glass-card">
+            <p>
+              Hi! I'm <strong>Eyerus Shewago</strong>, an Information Technology student passionate about software development, web technologies, and problem-solving. My coding journey is fueled by a desire to create interactive, dynamic user experiences and build projects that create real-world solutions.
+            </p>
+            <p>
+              I specialize in designing and engineering high-fidelity frontends, UI/UX designs, and full-stack solutions. I enjoy constantly learning new technologies to improve my craft.
+            </p>
+            <p>
+              Whether it's building a complex academic project or a creative web application, I focus on delivering clean structure, semantic code, and functional, elegant user interfaces.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-num gradient-text">100%</span>
+                <span class="stat-label">Committed to Quality</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num gradient-text">5+</span>
+                <span class="stat-label">Core Technologies</span>
+              </div>
+            </div>
+            <div style="margin-top: 2rem;">
+              <a href="Eyerus Shewago - CV _ Resume.pdf" target="_blank" class="btn btn-primary">
+                <i data-lucide="download"></i>
+                <span>Download CV</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="about-avatar-card glass-card">
+            <div class="avatar-container">
+              <div class="avatar-ring"></div>
+              <!-- Profile Picture -->
+              <div class="avatar-image-replacement" style="overflow: hidden; border-radius: 50%;">
+                <img src="jerry.jpg" alt="Eyerus Shewago" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+            </div>
+            <h3 class="avatar-title">Eyerus Shewago</h3>
+            <p class="avatar-subtitle">Information Technology Student</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section scroll-reveal">
+      <div class="section-container">
+        <h2 class="section-title"><span class="number">02.</span> Technical Skills</h2>
+        
+        <div class="skills-tabs">
+          <button class="tab-btn active" data-tab="frontend">Frontend & Design</button>
+          <button class="tab-btn" data-tab="backend">Backend & DB</button>
+          <button class="tab-btn" data-tab="tools">Core Competencies</button>
+        </div>
+
+        <div class="skills-content-container">
+          <!-- Frontend Tab -->
+          <div class="skills-grid active" id="frontend-skills">
+            <div class="skill-card glass-card">
+              <div class="skill-info">
+                <span class="skill-name">HTML / CSS</span>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-info">
+                <span class="skill-name">React.js</span>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-info">
+                <span class="skill-name">UI / UX Design</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+            </div>
+          </div>
+
+          <!-- Backend Tab -->
+          <div class="skills-grid" id="backend-skills">
+            <div class="skill-card glass-card">
+              <div class="skill-info">
+                <span class="skill-name">Node.js</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-info">
+                <span class="skill-name">Java</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-info">
+                <span class="skill-name">MySQL</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-info">
+                <span class="skill-name">Firebase</span>
+                <span class="skill-percent">82%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 82%"></div></div>
+            </div>
+          </div>
+
+          <!-- Creative/Tools Tab -->
+          <div class="skills-grid" id="tools-skills">
+            <div class="skill-card glass-card">
+              <div class="skill-info">
+                <span class="skill-name">Software Development</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-info">
+                <span class="skill-name">Problem Solving</span>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-info">
+                <span class="skill-name">Web Technologies</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-info">
+                <span class="skill-name">Git / GitHub</span>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="experience-section scroll-reveal">
+      <div class="section-container">
+        <h2 class="section-title"><span class="number">03.</span> Experience & Education</h2>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-date">Present</span>
+              <h3>Computer Science Student</h3>
+              <span class="timeline-company">Dire Dawa University</span>
+              <p>Studying core algorithms, data structures, and software engineering. Passionate about learning new technologies and building projects that create real-world solutions.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-date">Recent</span>
+              <h3>Academic Projects Developer</h3>
+              <span class="timeline-company">University Coursework</span>
+              <p>Experienced in developing various academic projects using Java, HTML, CSS, JavaScript, MySQL, and Firebase. Focused on creating functional and structured applications.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-date">Ongoing</span>
+              <h3>Full-Stack Developer & UI/UX Designer</h3>
+              <span class="timeline-company">Personal Portfolio</span>
+              <p>Designing custom web applications with modern interfaces, responsive layouts, and robust backend integrations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section scroll-reveal">
+      <div class="section-container">
+        <h2 class="section-title"><span class="number">04.</span> Featured Projects</h2>
+        
+        <!-- Category Filters -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card glass-card" data-category="fullstack">
+            <div class="project-img-wrapper">
+              <img src="exam.jpg" alt="Exam App" class="project-placeholder-svg" style="width: 100%; height: 100%; object-fit: cover;">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link-icon" aria-label="View Source Code"><i data-lucide="github"></i></a>
+                  <a href="#" class="project-link-icon" aria-label="Live Demo"><i data-lucide="external-link"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Exam App</h3>
+              <p>A comprehensive examination application developed to streamline academic testing and evaluations for students and instructors.</p>
+              <div class="project-tags">
+                <span>Java</span>
+                <span>MySQL</span>
+                <span>Firebase</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card glass-card" data-category="fullstack">
+            <div class="project-img-wrapper">
+              <img src="electric.jpg" alt="Electricity Billing System" class="project-placeholder-svg" style="width: 100%; height: 100%; object-fit: cover;">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link-icon" aria-label="View Source Code"><i data-lucide="github"></i></a>
+                  <a href="#" class="project-link-icon" aria-label="Live Demo"><i data-lucide="external-link"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Electricity Billing System</h3>
+              <p>A robust system designed to manage electricity consumption records, generate customer bills, and track payments efficiently.</p>
+              <div class="project-tags">
+                <span>HTML/CSS</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section scroll-reveal">
+      <div class="section-container">
+        <h2 class="section-title"><span class="number">05.</span> Say Hello</h2>
+        <div class="contact-grid">
+          
+          <div class="contact-info-card glass-card">
+            <h3>Let's Collaborate</h3>
+            <p>I am currently open to freelance contracts, internships, and full-time developer positions. Drop me a line if you want to chat about a new project, or just want to connect!</p>
+            
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="contact-icon-wrapper"><i data-lucide="mail"></i></div>
+                <div>
+                  <span class="contact-label">Email Me</span>
+                  <a href="mailto:shewagoeyerus@gmail.com" class="contact-link">shewagoeyerus@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="contact-icon-wrapper"><i data-lucide="phone"></i></div>
+                <div>
+                  <span class="contact-label">Phone</span>
+                  <a href="tel:+251929702850" class="contact-link">+251 929702850</a>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="contact-icon-wrapper"><i data-lucide="map-pin"></i></div>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Ethiopia</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.com/eyerus-shewago" target="_blank" class="social-btn" aria-label="GitHub"><i data-lucide="github"></i></a>
+              <a href="https://linkedin.com/in/eyerus-shewago" target="_blank" class="social-btn" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-form-card glass-card">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <input type="text" id="name" required placeholder=" " class="form-input">
+                <label for="name" class="form-label">Your Name</label>
+                <span class="error-msg" id="name-error">Please enter your name</span>
+              </div>
+              
+              <div class="form-group">
+                <input type="email" id="email" required placeholder=" " class="form-input">
+                <label for="email" class="form-label">Your Email</label>
+                <span class="error-msg" id="email-error">Please enter a valid email address</span>
+              </div>
+              
+              <div class="form-group">
+                <textarea id="message" required placeholder=" " rows="5" class="form-input"></textarea>
+                <label for="message" class="form-label">Your Message</label>
+                <span class="error-msg" id="message-error">Please enter a message</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                <span>Send Message</span>
+                <i data-lucide="send" id="submit-icon"></i>
+              </button>
+              
+              <!-- Form Success Message -->
+              <div class="form-status glass-card" id="form-status">
+                <i data-lucide="check-circle" class="success-icon"></i>
+                <div class="status-text">
+                  <h4>Message Sent!</h4>
+                  <p>Thanks for reaching out, Eyerus will respond shortly.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <a href="#home" class="logo">
+        <span class="logo-accent">&lt;</span>EYERUS SHEWAGO<span class="logo-accent"> /&gt;</span>
+      </a>
+      <p class="footer-text">Designed & Built by Eyerus Shewago &copy; 2024. All Rights Reserved.</p>
+      <a href="#home" class="back-to-top" aria-label="Back to Top"><i data-lucide="chevrons-up"></i></a>
+    </div>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script> 
+</body>
+</html>

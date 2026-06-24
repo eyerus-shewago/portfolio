@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eyerus Shewago - CV / Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f6f8;
+      color: #1a1a2e;
+      line-height: 1.6;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .cv-page {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #ffffff;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    @media print {
+      body { background: #fff; margin: 0; }
+      .cv-page { box-shadow: none; margin: 0; border-radius: 0; max-width: 100%; }
+      .no-print { display: none !important; }
+    }
+
+    /* ── Header ── */
+    .cv-header {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #ffffff;
+      padding: 40px 50px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .cv-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid rgba(0, 242, 254, 0.6);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .cv-header-text h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .cv-header-text h1 span {
+      color: #00f2fe;
+    }
+
+    .cv-header-text .tagline {
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #b0b8d4;
+      margin-bottom: 12px;
+    }
+
+    .cv-contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 24px;
+      font-size: 0.82rem;
+      color: #d0d7ea;
+    }
+
+    .cv-contact-row a {
+      color: #00f2fe;
+      text-decoration: none;
+    }
+
+    .cv-contact-row span::before {
+      content: attr(data-icon);
+      margin-right: 5px;
+    }
+
+    /* ── Body ── */
+    .cv-body {
+      padding: 35px 50px 40px;
+    }
+
+    .cv-section {
+      margin-bottom: 28px;
+    }
+
+    .cv-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #302b63;
+      border-bottom: 3px solid #00f2fe;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+
+    .cv-section p {
+      font-size: 0.92rem;
+      color: #3a3a5c;
+    }
+
+    /* ── Experience / Education items ── */
+    .cv-item {
+      margin-bottom: 18px;
+    }
+
+    .cv-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 2px;
+    }
+
+    .cv-item-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a1a2e;
+    }
+
+    .cv-item-date {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #302b63;
+      background: rgba(0, 242, 254, 0.12);
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+
+    .cv-item-subtitle {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #6b6b8d;
+      margin-bottom: 4px;
+    }
+
+    .cv-item p, .cv-item ul {
+      font-size: 0.88rem;
+      color: #3a3a5c;
+    }
+
+    .cv-item ul {
+      padding-left: 20px;
+    }
+
+    .cv-item ul li {
+      margin-bottom: 3px;
+    }
+
+    /* ── Skills Grid ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 30px;
+    }
+
+    .skill-category h4 {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #302b63;
+      margin-bottom: 4px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-tag {
+      font-size: 0.78rem;
+      background: linear-gradient(135deg, rgba(48,43,99,0.08), rgba(0,242,254,0.1));
+      color: #302b63;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 500;
+      border: 1px solid rgba(0,242,254,0.2);
+    }
+
+    /* ── Projects ── */
+    .project-entry {
+      margin-bottom: 14px;
+    }
+
+    .project-entry h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a1a2e;
+    }
+
+    .project-entry p {
+      font-size: 0.86rem;
+      color: #3a3a5c;
+    }
+
+    .project-tech {
+      font-size: 0.78rem;
+      color: #302b63;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    /* ── Languages ── */
+    .languages-list {
+      display: flex;
+      gap: 30px;
+    }
+
+    .languages-list div {
+      font-size: 0.9rem;
+    }
+
+    .languages-list strong {
+      color: #1a1a2e;
+    }
+
+    .languages-list span {
+      color: #6b6b8d;
+      font-size: 0.82rem;
+    }
+
+    /* ── Print Button ── */
+    .print-btn {
+      display: block;
+      max-width: 250px;
+      margin: 20px auto 40px;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #302b63, #24243e);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .print-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(48,43,99,0.3);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .cv-header { flex-direction: column; text-align: center; padding: 30px 25px; }
+      .cv-body { padding: 25px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .cv-contact-row { justify-content: center; }
+      .cv-item-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-page">
+    <!-- Header -->
+    <div class="cv-header">
+      <img src="jerry.jpg" alt="Eyerus Shewago" class="cv-photo">
+      <div class="cv-header-text">
+        <h1>EYERUS <span>SHEWAGO</span></h1>
+        <p class="tagline">Full-Stack Developer · UI/UX Designer · IT Student</p>
+        <div class="cv-contact-row">
+          <span>📧 <a href="mailto:shewagoeyerus@gmail.com">shewagoeyerus@gmail.com</a></span>
+          <span>📞 +251 929 702 850</span>
+          <span>📍 Ethiopia</span>
+          <span>🔗 <a href="https://linkedin.com/in/eyerus-shewago" target="_blank">LinkedIn</a></span>
+          <span>💻 <a href="https://github.com/eyerus-shewago" target="_blank">GitHub</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="cv-body">
+
+      <!-- Professional Summary -->
+      <div class="cv-section">
+        <h2 class="cv-section-title">Professional Summary</h2>
+        <p>
+          Highly motivated Information Technology student with a strong passion for software development, web technologies, and creative problem-solving. Experienced in developing full-stack applications using modern frameworks and tools. Skilled in designing intuitive user interfaces and writing clean, maintainable code. Eager to contribute to innovative projects and continuously grow as a developer.
+        </p>
+      </div>
+
+      <!-- Education -->
+      <div class="cv-section">
+        <h2 class="cv-section-title">Education</h2>
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-title">Bachelor of Science in Information Technology</span>
+            <span class="cv-item-date">Present</span>
+          </div>
+          <div class="cv-item-subtitle">Dire Dawa University — Dire Dawa, Ethiopia</div>
+          <ul>
+            <li>Studying core algorithms, data structures, database systems, and software engineering.</li>
+            <li>Developing academic projects using Java, HTML/CSS, JavaScript, MySQL, and Firebase.</li>
+            <li>Actively participating in coding communities and tech-related extracurricular activities.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Technical Skills -->
+      <div class="cv-section">
+        <h2 class="cv-section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4>Frontend & Design</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">UI/UX Design</span>
+              <span class="skill-tag">Responsive Design</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>Backend & Database</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Firebase</span>
+            </div>
+          </div>
+          <div class="skill-category" style="margin-top: 10px;">
+            <h4>Tools & Platforms</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-category" style="margin-top: 10px;">
+            <h4>Core Competencies</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Team Collaboration</span>
+              <span class="skill-tag">Agile Methodology</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="cv-section">
+        <h2 class="cv-section-title">Projects</h2>
+
+        <div class="project-entry">
+          <h4>📋 Exam App</h4>
+          <p>A comprehensive examination application designed to streamline academic testing and evaluations for students and instructors. Implemented user authentication, question management, automated grading, and result tracking.</p>
+          <p class="project-tech">Technologies: Java · MySQL · Firebase</p>
+        </div>
+
+        <div class="project-entry">
+          <h4>⚡ Electricity Billing System</h4>
+          <p>A robust billing system designed to manage electricity consumption records, generate accurate customer bills, and track payment history efficiently. Features include customer management, meter reading input, and automated bill generation.</p>
+          <p class="project-tech">Technologies: HTML/CSS · JavaScript · Node.js</p>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="cv-section">
+        <h2 class="cv-section-title">Languages</h2>
+        <div class="languages-list">
+          <div><strong>Amharic</strong> — <span>Native</span></div>
+          <div><strong>English</strong> — <span>Professional Proficiency</span></div>
+        </div>
+      </div>
+
+      <!-- Interests -->
+      <div class="cv-section">
+        <h2 class="cv-section-title">Interests</h2>
+        <p>Software Development · Web Technologies · Open Source Contributions · Learning New Technologies · Creative UI/UX Design · Problem Solving Challenges</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Print / Save as PDF Button -->
+  <button class="print-btn no-print" onclick="window.print()">📄 Save as PDF / Print</button>
+
+</body>
+</html>
